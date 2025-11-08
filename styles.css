@@ -240,6 +240,26 @@
 }
 
 @layer component {
+    .skip-to-main:not(:focus) {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+    .skip-to-main {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: var(--background-accent-main);
+        color: var(--text-brand-light);
+        text-decoration: none;
+        padding: 1rem;
+    }
+
     .site-footer {
         text-align: center;
         padding-block: 2rem;
