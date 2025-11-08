@@ -338,6 +338,10 @@
         }
     }
 
+    [aria-controls="primary-navigation"] {
+        display: none;
+    }
+
     .primary-navigation {
         ul {
             display: flex;
@@ -350,6 +354,7 @@
         }
 
         @media (width < 760px) {
+            display: none;
             z-index: 10;
             position: absolute;
             top: 0;
@@ -371,6 +376,16 @@
                 margin-block-start: 1.5rem;
                 border-top: 2px solid var(--background-accent-light);
             }
+        }
+    }
+
+    @media (width < 760px) {
+        [aria-controls="primary-navigation"] {
+            display: block;
+        }
+
+        [aria-expanded="true"] ~ .primary-navigation {
+            display: block;
         }
     }
 }
